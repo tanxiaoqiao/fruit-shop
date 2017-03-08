@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+  <!-- This app is massive! -->
+  <named-config name="myconfig"> 
+    <property name="jdbcUrl">jdbc:mysql://localhost:3306/jdbcsystem</property>
+   	<property name="driverClass">com.mysql.jdbc.Driver</property>
+   	<property name="user">root</property>
+   	<property name="password">123456</property>
+    <property name="acquireIncrement">50</property>
+    <property name="initialPoolSize">100</property>
+    <property name="minPoolSize">50</property>
+    <property name="maxPoolSize">1000</property>
+	<property name="checkoutTimeout">30000</property>
+    <!-- intergalactoApp adopts a different approach to configuring statement caching -->
+    <property name="maxStatements">200</property> 
+    <property name="maxStatementsPerConnection">5</property>
+  </named-config>
+</c3p0-config>
